@@ -1,0 +1,29 @@
+<div ng-include src="'vues/medecins.html'" ></div> 
+<form class = "col-lg-6"  ng-submit="enregistrer()">
+    <div class="form-group">
+        <label for = "motif" > {{::lblMotif}} </label>
+        <textarea type="text" 
+              ng-model = "r.motif"  
+              class = "form-control" 
+              required="true" >
+        </textarea>
+    </div>
+    <div class="form-group">
+        <label for = "bilan" > {{::lblBilan}} </label>
+        <textarea type="text" 
+              ng-model = "r.bilan"  
+              class = "form-control" 
+              required="true" >
+        </textarea>
+    </div>
+    <div class="form-group">
+        <label for = "date">{{::lblDate}}</label>
+        <input type ="date" 
+               ng-model="r.date" 
+               required="true"/>
+     </div>     
+       <h2>{{::lblTitreMedicament}}</h2>
+     <div ng-include src="'vues/medicamentOffert.html'" ></div>
+     <input type ="submit" class="btn-group btn-group-justified" value ="{{::lblEnvoyer}}"> 
+     <div class={{typeMessage}}>{{message}}</div> <!-- On ajoute ici la variable qui va nous permettre de récupérer le message envoyé depuis controller.js -->
+</form> 

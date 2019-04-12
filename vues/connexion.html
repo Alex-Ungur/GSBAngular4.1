@@ -1,0 +1,18 @@
+ 
+<form class = "col-lg-6" name = "frmLogin" ng-submit="valider()" >
+    
+    <div class="form-group">
+            <label for = "login" >{{::lblLogin}}</label>
+            <input type="text"  ng-model = "login" class = "form-control"/>
+           
+    </div>
+     <div class="form-group">
+            <label for = "mdp" >{{::lblMdp}}</label>
+            <input type = "password"  ng-model = "mdp" class = "form-control"  />
+     </div>    
+     <div class="alert alert-danger" ng-show ="msgErreur" >{{::lblMessage}}</div>
+     <input type ="submit" value ="{{::lblBtn}}">       
+</form>
+<div ng-include src = "'vues/logo.html'" ></div>
+  
+  

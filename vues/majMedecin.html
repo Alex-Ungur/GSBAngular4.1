@@ -1,0 +1,29 @@
+<div ng-include src = "'vues/menuCommun.html'" ></div>
+<form class = "col-lg-6" name = "frmMedecin" ng-submit="valider()">
+     <div class="form-group">
+            <label for = "adresse" > {{::lblAdresse}} </label>
+            <input type = "text" 
+                   ng-model = "m.adresse"  
+                   class = "form-control" 
+                
+                   required="true" />
+     </div> 
+    <div class="form-group">
+            <label for = "tel" > {{::lblTel}} </label>
+            <input type = "text" 
+                   ng-model = "m.tel"  
+                   class = "form-control"
+             
+                   required="true" />
+     </div> 
+    <div class="form-group">
+            <label for = "specialite" > {{::lblSpecialite}} </label>
+            <input type = "text" 
+                   ng-model = "m.specialite"  
+                   class = "form-control"
+                   />
+     </div> 
+    
+      <input type ="submit" value ="{{::lblEnvoyer}}">   
+      <div class={{typeMessage}}>{{message}}</div>
+</form>

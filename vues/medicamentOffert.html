@@ -1,0 +1,72 @@
+<table>
+    <tr >
+        <td>
+            <div class = "col-lg-6" >
+                <div class="form-group">
+                    <input type="search" 
+                       ng-model = "rechercheMedicament.nom"  
+                       ng-change = "chargerMedicaments()"  
+                       placeholder = "Nom du médicament..." 
+                     /> 
+               </div>
+            </div>
+                <br><br>
+            <div class="list-group">
+                <ul>
+                     <li class = "list-group-item" 
+                         ng-repeat = "medicament in medicaments" 
+                         ng-click = "choisirMedicament(medicament)" > 
+                                {{medicament.nomCommercial }}    
+                     </li>
+                </ul>
+            </div> 
+         </td>
+        <td>
+            <div class="form-group">
+                <label for="qteSelect"> {{::lblQte}}</label>
+                <select   ng-model="data.qteSelect" 
+                          class="form-control" 
+                          name="qteSelect" >
+                    <option 
+                        ng-repeat="qte in qtes" 
+                        value="{{qte}}" >{{qte}}</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+   <tr>    
+        <td>
+            <div class="btn-group">
+            <button type="button" 
+                    class="btn btn-primary btn-lg" 
+                    ng-click="ajouter()">
+                        {{::lblAjouterMedicament}}</button>
+            <button type="button" 
+                    class="btn btn-primary btn-lg" 
+                    ng-click="retirer()">
+                        {{::lblRetirerMedicament}}</button>
+            </div>
+        </td>
+        <td>
+                <ul>
+                    <li ng-repeat=" med in medicamentsSelect">
+                        {{med.nom}} {{med.qte}}</li>             
+                </ul>
+          </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

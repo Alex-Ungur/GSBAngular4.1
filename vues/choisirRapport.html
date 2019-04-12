@@ -1,0 +1,15 @@
+<div ng-include src = "'vues/menuCommun.html'" ></div>
+   
+    <label> {{::lblDateRapport}} </label>
+    <input type="date" ng-model = "dateRapport"  ng-change="changementDate()" required="true"  />
+    
+    {{message}}
+    <div class="list-group">
+        <a href="#/majrapport?id={{rapport.id}}&nom={{rapport.nomMedecin}}&prenom={{rapport.prenomMedecin}}" class="list-group-item" ng-repeat="rapport in rapports"> 
+            {{rapport.nomMedecin }}  {{rapport.prenomMedecin }} </a>
+   </div>   
+ 
+	
+
+
+

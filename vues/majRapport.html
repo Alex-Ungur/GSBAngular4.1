@@ -1,0 +1,26 @@
+<div ng-include src = "'vues/menuCommun.html'" ></div>
+<form class = "col-lg-6"  ng-submit="valider()">
+    {{nomMedecin}}{{prenomMedecin}}
+    <div class="form-group">
+            <label for = "motif" > {{::lblMotif}} </label>
+            <textarea type="text" ng-model = "motif"  class = "form-control" required="true" >
+            {{motif}}</textarea>
+    </div>
+    <div class="form-group">
+            <label for = "bilan" > {{::lblBilan}} </label>
+            <textarea type="text" ng-model = "bilan"  class = "form-control" required="true" >
+            {{bilan}}</textarea>
+    </div>
+     <input type ="submit" value ="{{::lblEnvoyer}}">  
+</form>    
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<div ng-include src = "'vues/menuCommun.html'" ></div>
+ 
+<div class ={{typeMessage}}>{{message}}</div>
+   
+        <table class="table table-bordered">
+            <tr >
+                <th>Date</th><th>motif</th><th>Bilan</th><th>Nom du visiteur</th>
+            </tr>
+        <tr ng-repeat="rapport in rapports">
+            
+            <td>{{rapport.date }} </td> 
+            <td>{{rapport.motif }} </td>
+            <td>{{rapport.bilan }} </td>
+            <td>{{rapport.nom }} </td>
+        </tr>
+            </table>
+  
+ 
+ 

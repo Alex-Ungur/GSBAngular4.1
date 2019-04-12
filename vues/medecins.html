@@ -1,0 +1,21 @@
+<div ng-include src = "'vues/menuCommun.html'" ></div>
+
+<div class = "col-lg-6" >
+        <div class="form-group">
+            <input type="search" 
+                   ng-model = "rechercheMedecin.nom"
+                   ng-change = "chargerMedecins()"  
+                   placeholder = "Nom du médecin..." 
+                  /> 
+        </div>
+</div>
+<br><br>
+<div class="list-group">
+     <ul>
+         <li class = "list-group-item" 
+             ng-repeat = "medecin in medecins" 
+             ng-click = "choisirMedecin(medecin)" > 
+             {{medecin.nom }} {{medecin.prenom }}   
+         </li>
+    </ul>
+</div>  
